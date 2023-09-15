@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estilos.css" type="text/css">
+    <title>Mi Posteo</title>
+</head>
+<body>
+<div class="container">
+    
+    <div class="encabezado">
+        <img src="<%= publicacion.url_posteo%>" alt="" class="imagen">
+        <div class="textoEncabezado">
+            <div class="id"><%= publicacion.id_posteo %></div>
+            <div class="tituloVista"><%= publicacion.titulo_posteo%></div>
+        </div>
+    </div>
+
+    <div class="cuerpoPosteo">
+        <label for="formGroupExampleInput" class="form-label"><%= publicacion.posteo%></label>
+        
+    </div>
+    <label for="formGroupExampleInput" class="form-label"><%= publicacion.timestamps%></label>
+    <div class="navVista">
+        
+        <a type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover" href="/editar/<%= publicacion.id_posteo %>">
+            Editar
+        </a>
+        <a type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover" href="/elimina/<%= publicacion.id_posteo %>">
+            Eliminar
+        </a>
+        <a type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover" href="/">
+            Inicio
+        </a>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
